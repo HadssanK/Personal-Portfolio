@@ -1,21 +1,22 @@
 import React from "react";
-
+import todo from "../../assets/todo.png"
+import tumb from "../../assets/tumb.png"
 const Projects = () => {
   // Projects data directly inside the component
   const projects = [
     {
-      title: "Recipe Finder",
+      title: "Todo with LocalStorage",
       description:
         "A recipe finder application built with React, allowing users to search and discover various recipes with detailed ingredients and instructions.",
-      image: "https://via.placeholder.com/400x250.png", // Replace with actual image
-      githubLink: "https://github.com/HadssanK/recipFinder.git"
+      image: todo, // Replace with actual image
+     
     },
     {
-      title: "Weather App",
+      title: "Thumbnail downloader",
       description:
-        "A weather forecasting app built with React and OpenWeatherMap API, providing users with accurate weather data based on their location.",
-      image: "https://via.placeholder.com/400x250.png", // Replace with actual image
-      githubLink: "https://github.com/YourGitHub/weather-app"
+      "This is a sleek tool for downloading YouTube thumbnails quickly and easily",
+        image: tumb, // Replace with actual image
+
     },
     {
       title: "Task Manager",
