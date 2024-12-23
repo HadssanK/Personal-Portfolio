@@ -3,6 +3,7 @@ import todo from "../../assets/todo.png"
 import tumb from "../../assets/tumb.png"
 import Passgen from "../../assets/passgen.png"
 import gemini from "../../assets/gemini.png"
+import Hotal from "../../assets/Hotal_M.png"
 const Projects = () => {
   // Projects data directly inside the component
   const projects = [
@@ -32,6 +33,12 @@ const Projects = () => {
       description:  "A React-based clone of the Gemini app, replicating its core features and user interface for practice and learning purposes.",
       image: gemini, // Replace with actual image
       githubLink: "https://github.com/YourGitHub/portfolio"
+    },
+    {
+      title: "Hotal Management System",
+      description: "Developed a React.js-based admin dashboard for managing hotel operations efficiently",
+      image: Hotal, // Replace with actual image
+      githubLink: "https://hadssank.github.io/Mangement-system/"
     }
   ];
 

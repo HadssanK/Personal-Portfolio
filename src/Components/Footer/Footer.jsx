@@ -9,7 +9,7 @@ const Footer = () => {
       {/* Social Media Links */}
       <div className="flex justify-center space-x-4 mb-4">
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/HadssanK"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-400 hover:text-white transition duration-300"
@@ -18,7 +18,7 @@ const Footer = () => {
           GitHub
         </a>
         <a
-          href="https://linkedin.com/in/yourusername"
+          href="https://www.linkedin.com/in/hassan-khan-a47b67251/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-400 hover:text-white transition duration-300"
