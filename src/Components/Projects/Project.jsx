@@ -1,7 +1,7 @@
 import React from "react";
-import { Github, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import Contentgenrator from '../../assets/Contentgenrator.png'
-import Innercompany from '../../assets/Innercompany.png'
+import Innercompany from '../../assets/innercompany.png'
 import Hotal_M from '../../assets/Hotal_M.png'
 import gemini from '../../assets/gemini.png'
 import thumbnailDnlod from '../../assets/thumbnailDnlod.png'
