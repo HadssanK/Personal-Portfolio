@@ -1,5 +1,5 @@
 import React from 'react';
-import HassanCV from '../../assets/newCv.pdf'; // Import the CV file if needed
+import HassanCV from '../../assets/For React.pdf'; // Import the CV file if needed
 
 const Footer = () => {
   return (
