@@ -1,88 +1,104 @@
 import React from "react";
-import todo from "../../assets/todo.png"
-import tumb from "../../assets/tumb.png"
-import Passgen from "../../assets/passgen.png"
-import gemini from "../../assets/gemini.png"
-import Hotal from "../../assets/Hotal_M.png"
-const Projects = () => {
-  // Projects data directly inside the component
+import { Github, ExternalLink } from "lucide-react";
+import Contentgenrator from '../../assets/Contentgenrator.png'
+import Innercompany from '../../assets/Innercompany.png'
+import Hotal_M from '../../assets/Hotal_M.png'
+import gemini from '../../assets/gemini.png'
+import thumbnailDnlod from '../../assets/thumbnailDnlod.png'
+import todo from '../../assets/todo.png'
+import passgen from '../../assets/passgen.png'
+
+export default function Projects() {
   const projects = [
     {
-      title: "Todo with LocalStorage",
-      description:
-        "A recipe finder application built with React, allowing users to search and discover various recipes with detailed ingredients and instructions.",
-      image: todo, // Replace with actual image
-     
+      title: "AI Content Generator",
+      description: "Generate SEO optimized content automatically using Gemini API for blogs, websites, and more.",
+      image: Contentgenrator,
+      github: "#",
+      demo: "https://lms-frontend-e0sw.onrender.com",
+       tech: ["React", "Tailwind" , "gemini"],
     },
     {
-      title: "Thumbnail downloader",
-      description:
-      "This is a sleek tool for downloading YouTube thumbnails quickly and easily",
-        image: tumb, // Replace with actual image
-
-    },
-    {
-      title: "Password Generator",
-      description:
-      "A React-based tool to generate secure and customizable passwords",
-      image: Passgen, // Replace with actual image
-      githubLink: "https://github.com/HadssanK/Password-Generator.git"
-    },
-    {
-      title: "Gemini Clone",
-      description:  "A React-based clone of the Gemini app, replicating its core features and user interface for practice and learning purposes.",
-      image: gemini, // Replace with actual image
-      githubLink: "https://github.com/YourGitHub/portfolio"
+      title: "RequestDesk",
+      description: "A platform where employees can submit network issues, office problems, or any requests directly to the admin for quick resolution",
+      image:Innercompany,
+      github: "#",
+      demo: "https://comptrack-frontend.onrender.com",
+      tech: ["MongoDB", "Express", "React", "Node.js"],
     },
     {
       title: "Hotal Management System",
-      description: "Developed a React.js-based admin dashboard for managing hotel operations efficiently",
-      image: Hotal, // Replace with actual image
-      githubLink: "https://hadssank.github.io/Mangement-system/"
+      description: "Software to manage hotel bookings, guests, rooms, and billing efficiently.",
+      image: Hotal_M,
+      github: "#",
+      demo: "#",
+      tech: ["React", "redux", "Tailwind"],
+    },
+      {
+      title: "gemini clone",
+      description: "A React-based clone of Google Gemini AI, featuring real-time chat interface, API integration, and intelligent response generation using node js backends",
+      image: gemini,
+      github: "#",
+      demo: "#",
+      tech: ["React", "express", "Tailwind"],
+    },
+      {
+      title: "Thumbnail Downloader",
+      description: "A sleek and responsive React.js app that fetches and downloads video thumbnails using public APIs. Just paste a YouTube URL and get high-quality thumbnails in seconds — fast, clean, and user-friendly!",
+      image: thumbnailDnlod,
+      github: "#",
+      demo: "#",
+      tech: ["React","Tailwind"],
+    },
+      {
+      title: "Redux-powered TODO App",
+      description: "A fast, user-friendly TODO app built with React, Redux Toolkit, and styled with Tailwind CSS for smooth task management.",
+      image: todo,
+      github: "#",
+      demo: "#",
+      tech: ["React"," Redux Toolkit","Tailwind"],
+    },
+      {
+      title: "Password generator",
+      description: "A simple and secure React app that generates strong, customizable passwords instantly to keep your accounts safe.",
+      image: passgen,
+      github: "#",
+      demo: "#",
+      tech: ["React"," Redux Toolkit","Tailwind"],
     }
   ];
 
   return (
-    <section className="py-16 bg-gray-100" id="projects">
-      <h2 className="text-3xl font-semibold text-center mb-12 text-gray-800">
-        My Projects
-      </h2>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 max-w-7xl mx-auto">
-  {/* Map through the projects and display them */}
-  {projects.map((project, index) => (
-    <div
-      key={index}
-      className="bg-white p-6 rounded-lg shadow-xl transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl flex flex-col"
-    >
-      {/* Project Image */}
-      <div className="overflow-hidden rounded-lg mb-4">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-48 object-cover" // Set fixed height for image
-        />
+    <div className="min-h-screen bg-gray-900 py-10">
+      <h1 className="text-4xl text-white font-bold text-center mb-10">My Projects</h1>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 px-5">
+        {projects.map((proj, i) => (
+          <div
+            key={i}
+            className="bg-gradient-to-br from-gray-800 via-gray-900 to-black border border-white/10 rounded-xl overflow-hidden shadow-lg transition-all duration-300 w-full max-w-sm mx-auto 
+            hover:scale-105 hover:border-indigo-400 hover:shadow-indigo-500/40"
+          >
+            <img src={proj.image} alt={proj.title} className="w-full h-48 object-cover" />
+            <div className="p-5">
+              <h2 className="text-2xl font-semibold text-white mb-2">{proj.title}</h2>
+              <p className="text-gray-300 mb-3">{proj.description}</p>
+              <div className="flex flex-wrap gap-2 text-sm mb-4">
+                {proj.tech.map((t, idx) => (
+                  <span key={idx} className="bg-white/20 text-white px-3 py-1 rounded-full">
+                    {t}
+                  </span>
+                ))}
+              </div>
+              <div className="flex gap-4">
+              
+                <a href={proj.demo} target="_blank" className="flex items-center gap-2 text-green-400 hover:text-green-300">
+                  <ExternalLink size={18} /> Live
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
-      <h3 className="text-2xl font-semibold text-gray-800 mb-4">{project.title}</h3>
-      <p className="text-gray-600 mb-4 flex-grow">{project.description}</p> {/* Allow content to grow and avoid card shrinkage */}
-      <div className="flex justify-between items-center">
-        <a
-          href={project.githubLink}
-          className="bg-gradient-to-r from-teal-400 to-teal-600 text-white px-6 py-2 rounded-lg hover:bg-gradient-to-l hover:from-teal-500 hover:to-teal-700 transition duration-300"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub Repo
-        </a>
-      </div>
-      {/* Gradient Line Below Project */}
-      <div className="w-full h-1 mt-6 bg-gradient-to-r from-teal-500 to-gray-800"></div>
     </div>
-  ))}
-</div>
-
-    </section>
   );
-};
-
-export default Projects;
+}
